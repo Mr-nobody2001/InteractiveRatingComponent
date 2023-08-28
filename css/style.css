@@ -1,0 +1,188 @@
+@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap");
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: "Overpass", sans-serif;
+}
+
+body {
+  background-color: #121417;
+}
+
+@media (min-width: 350px) and (orientation: landscape) {
+  body {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    padding: 100px 0px;
+  }
+}
+
+@media (min-width: 576px) and (min-height: 438px) {
+  body {
+    display: inline-block;
+    padding: 0px;
+  }
+}
+
+/*Rating screen*/
+
+#PrincipalContainer {
+  position: absolute;
+  top: 50vh;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 25px 25px 30px 25px;
+  height: 450px;
+  min-width: 200px;
+  width: 88%;
+  max-width: 430px;
+  background-color: #212932;
+  border-radius: 20px;
+}
+
+@media (min-width: 350px) {
+  #PrincipalContainer {
+    height: 400px;
+  }
+}
+
+@media (min-width: 350px) and (orientation: landscape) {
+  #PrincipalContainer {
+    position: static;
+    transform: translate(0%, 0%);
+    min-height: 350px;
+    max-height: 430px;
+    min-width: 350px;
+    width: 100%;
+    max-width: 430px;
+  }
+}
+
+@media (min-width: 576px) and (min-height: 438px) {
+  #PrincipalContainer {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    padding: 35px;
+    height: 430px;
+    width: 430px;
+  }
+}
+
+#RatingButtonContainer {
+  display: flex;
+  justify-content: space-between;
+}
+
+#PrincipalContainer > button {
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  height: 50px;
+  color: #fff;
+  background-color: #fb7413;
+  border-radius: 30px;
+  outline: none;
+  border: 1px solid #121417;
+}
+
+@media (min-width: 576px) {
+  #PrincipalContainer > button:hover {
+    color: #fb7413;
+    background-color: #fff;
+    cursor: pointer;
+  }
+}
+
+/*Thank you screen*/
+
+.ThankYouScreen {
+  text-align: center;
+  padding: 30px 25px 50px 30px !important;
+}
+
+.ThankYouScreen > figure {
+  width: 100%;
+  height: 100%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.ThankYouScreen > figure > img {
+  width: 50%;
+}
+
+@media (min-width: 350px) and (orientation: landscape) {
+  .ThankYouScreen > figure > img {
+    width: 35%;
+  }
+}
+
+@media (min-width: 576px) and (min-height: 438px) {
+  .ThankYouScreen > figure > img {
+    width: 50%;
+  }
+}
+
+#ThankYouTextContainer > h1 {
+  margin-bottom: 15px !important;
+}
+
+#ThankYouTextContainer > p:first-of-type {
+  color: #fb7413 !important;
+  display: inline-block;
+  background-color: #263038;
+  padding: 8px 15px 8px 15px;
+  font-size: 1rem;
+  border-radius: 30px;
+  margin-bottom: 30px !important;
+}
+
+#PrincipalContainer > article > h1 {
+  font-size: 1.75rem;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+#PrincipalContainer > article > p {
+  color: #959eac;
+}
+
+/*Circle background (star image and rating buttons)*/
+
+.DefaultCircleBackground {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100px;
+  width: 45px;
+  height: 45px;
+  background-color: #263038;
+  color: #959eac;
+}
+
+@media (min-width: 576px) {
+  .DefaultCircleBackground {
+    width: 55px;
+    height: 55px;
+  }
+}
+
+@media (min-width: 576px) and (min-height: 438px) {
+  #RatingButtonContainer > .DefaultCircleBackground:hover {
+    color: #fff;
+    background-color: #fb7413;
+    cursor: pointer;
+  }
+}
+
+.ActiveCircleBackground {
+  color: #fff;
+  background-color: #959eac;
+}
